@@ -23,7 +23,7 @@ use kentron::{
 
 /// The kentron release this adapter builds against, as Cargo.toml pins it (kentron's crate
 /// exports no version).
-const VERSION: &str = "0.19.3";
+const VERSION: &str = "0.21.0";
 
 /// The contract's `10·ε` within which a point names an edge or a face.
 const NAMING: f64 = 10.0 * 1e-7;

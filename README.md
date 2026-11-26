@@ -41,6 +41,7 @@ holds every solid in one kentron `Model` and answers each function with kentron'
 | `fillet_variable`                              | `blend::fillet_linear`, the radii ordered by the edge's vertices      |
 | `fillet_faces`, `full_round`                   | `blend::fillet_faces`, `blend::full_round`                            |
 | `fillet_setback`                               | `blend::fillet_setback`                                               |
+| `fillet_setback_g2`                            | `blend::fillet_setback_g2`                                            |
 | `fillet_conic`, `fillet_g2`                    | `blend::fillet_conic`, `blend::fillet_g2`                             |
 | `chamfer`, `chamfer_two`, `chamfer_distances`  | `blend::chamfer`, `blend::chamfer_edges`                              |
 | `offset`                                       | `offset::shape`, joined by arcs                                       |
@@ -97,13 +98,12 @@ as failed.
 
 | Function                                                                  | Why                                                                                           |
 | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `fillet_setback_g2`                                                       | No such blend                                                                                 |
 | `betti`, `section_area`                                                   | Each only through other calls: counts of shapes, a section's curves                           |
 
 Also refused as unsupported: a blend section (`gn`) segment in a profile, a loft section with holes
 (kentron lofts wires), and `thicken` of more than one face (kentron thickens one sheet).
 
-[`Cargo.toml`](Cargo.toml) pins one kentron release from crates.io, 0.19.3, and `VERSION` in
+[`Cargo.toml`](Cargo.toml) pins one kentron release from crates.io, 0.21.0, and `VERSION` in
 [`src/main.rs`](src/main.rs) reports it; moving to another release is a change made here.
 
 ## Setup

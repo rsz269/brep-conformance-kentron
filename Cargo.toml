@@ -9,4 +9,4 @@ publish = false
 [dependencies]
 brep-protocol = "2.0.1"
 # One kentron release, the one `VERSION` in src/main.rs names: moving to another is a change made here.
-kentron = "=0.19.3"
+kentron = "=0.21.0"
