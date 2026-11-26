@@ -103,7 +103,7 @@ as failed.
 Also refused as unsupported: a blend section (`gn`) segment in a profile, a loft section with holes
 (kentron lofts wires), and `thicken` of more than one face (kentron thickens one sheet).
 
-[`Cargo.toml`](Cargo.toml) pins one kentron release from crates.io, 0.21.0, and `VERSION` in
+[`Cargo.toml`](Cargo.toml) pins one kentron release from crates.io, 0.21.1, and `VERSION` in
 [`src/main.rs`](src/main.rs) reports it; moving to another release is a change made here.
 
 ## Setup

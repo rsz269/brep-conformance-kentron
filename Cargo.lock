@@ -52,9 +52,9 @@ checksum = "3bd1574e617a9a6c1f8f8181bd7e841e1f20e4277607ef28945765188d6284d4"
 
 [[package]]
 name = "kentron"
-version = "0.21.0"
+version = "0.21.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "13147386393aa56bf83957ad720fe7697fb0c0871133d2e68201d3b48e817da1"
+checksum = "1853ae9e5c984d026f6e60cccb3ada24afc7048860675eaeab9425b04569eb9e"
 dependencies = [
  "rayon",
 ]
