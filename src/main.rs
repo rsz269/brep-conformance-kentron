@@ -30,7 +30,6 @@ const NAMING: f64 = 10.0 * 1e-7;
 
 /// The functions kentron answers in one call. The rest of the protocol's, with why not:
 ///
-/// - `fillet_setback_g2`: kentron has no such operation.
 /// - `betti`, `section_area`: kentron reaches each only through other calls (counts of shapes;
 ///   a section whose curves bound an area).
 const SUPPORTED: &[&str] = &[
@@ -58,6 +57,7 @@ const SUPPORTED: &[&str] = &[
     "fillet_faces",
     "full_round",
     "fillet_setback",
+    "fillet_setback_g2",
     "fillet_conic",
     "fillet_g2",
     "project",
@@ -997,6 +997,11 @@ impl Kernel for Kentron {
     fn fillet_setback(&mut self, s: &Shape, edges: &[model::Vec3], radius: f64, setback: f64) -> Result<Shape, Refusal> {
         let edges = self.entities(*s, edges, NodeKind::Edge)?;
         blend::fillet_setback(&mut self.model, *s, &edges, radius, setback).map_err(refusal)
+    }
+
+    fn fillet_setback_g2(&mut self, s: &Shape, edges: &[model::Vec3], radius: f64, setback: f64) -> Result<Shape, Refusal> {
+        let edges = self.entities(*s, edges, NodeKind::Edge)?;
+        blend::fillet_setback_g2(&mut self.model, *s, &edges, radius, setback).map_err(refusal)
     }
 
     fn fillet_conic(&mut self, s: &Shape, edges: &[model::Vec3], setback: f64, rho: f64) -> Result<Shape, Refusal> {
